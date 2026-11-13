@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>UIDBuy spreadsheet: Sneaker, Streetwear und QC im Überblick</title>
+  <meta name="description" content="UIDBuy spreadsheet auf Deutsch: Zehn Kategorien entdecken, Größen in Zentimetern vergleichen, QC-Fotos prüfen und den Versand nach Deutschland planen.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:title" content="UIDBuy spreadsheet: Sneaker, Streetwear und QC im Überblick">
+  <meta property="og:description" content="Zehn Kategorien, praktische Größenvergleiche und Antworten zu QC-Fotos und Versand nach Deutschland.">
+  <meta name="theme-color" content="#f5f1eb">
+  <!-- Recherche: Die erste Google-Ergebnisseite für Deutschland war nicht verifizierbar. Die folgenden zehn Treffer aus der Websuche bilden keine bestätigte Rangfolge.
+  uidbuysheet.com (kuratierte Marktplatz-Links); uidbuyspreadsheet.org (Merkliste und Varianten);
+  uidbuyspreadsheet.com (Marken- und Kategoriesuche); grails.fit/uidbuy-spreadsheet (Katalog und QC-Fotos);
+  uidbuy.lat (Packliste und Gewicht); w2cspreadsheet.com/agents/uidbuy (Agent und Versand);
+  uidbuy.store (Quelllinks und Varianten); uidbuy.net/spreadsheets/ (Aktualität und Belege);
+  grails.fit/uidbuy-spreadsheet-shoes (Schuhkatalog); grails.fit/uidbuy-spreadsheet-tees (T-Shirts und Ablauf).
+  Nebenkeywords: UIDBuy Sneaker, UIDBuy Streetwear, UIDBuy QC-Fotos, UIDBuy Versand nach Deutschland.
+  Long-Tail-Suchideen: UIDBuy spreadsheet auf Deutsch; UIDBuy Sneaker Größen in cm; Sneaker Innensohle messen;
+  Sneaker Modellcode und Farbvariante prüfen; UIDBuy QC-Fotos für Schuhe; Schuhsohle im Profil kontrollieren;
+  Hoodie Brustweite flach messen; Pullover Ärmel ab Schulternaht messen; Oversize T-Shirt mit Referenzshirt vergleichen;
+  Jeansjacke Schulterbreite messen; Shorts Bundweite ungedehnt messen; Hosen Innenbeinlänge vergleichen;
+  Cap Kopfumfang in cm prüfen; Set Oberteil und Hose getrennt messen; Unterwäsche Größentabelle vergleichen;
+  Trikot Rückennummer auf QC-Foto prüfen; Seidentuch Abmessungen vergleichen; Kettenlänge mit Verschluss messen;
+  Produktlink vor der Bestellung prüfen; Händlerfoto und QC-Foto unterscheiden; QC-Fotos als Echtheitsnachweis;
+  UIDBuy Versand nach Deutschland kalkulieren; Volumengewicht und Paketmaß vergleichen; Gesamtkosten vor Bestellung berechnen.
+  -->
+  <style>
+    :root{color-scheme:light;--paper:#f5f1eb;--ink:#24231f;--wine:#682a39;--muted:#5d554e;--line:#d8cbc0;--card:#fffaf5}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+    .wrap{width:min(72rem,calc(100% - 2rem));margin:auto}
+    a{color:var(--wine);text-underline-offset:.2em}
+    a:focus-visible,summary:focus-visible{outline:3px solid #946327;outline-offset:4px}
+    .mast{padding:.85rem 0;border-bottom:1px solid var(--line);font-weight:750}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(1rem,4vw,4rem);align-items:center;padding:2.25rem 0 1.5rem}
+    h1,h2,h3,p,figure{margin:0}
+    h1,h2{font-family:Georgia,serif;line-height:1.07}
+    h1{font-size:clamp(2.7rem,8vw,6rem);letter-spacing:-.055em;overflow-wrap:anywhere}
+    h2{font-size:clamp(1.8rem,4vw,2.65rem);margin-bottom:.8rem}
+    h3{font-size:1.12rem;line-height:1.35}
+    p+p,h3+p{margin-top:.55rem}
+    .intro{margin:1rem 0;max-width:53ch;color:var(--muted)}
+    .button{display:inline-block;background:var(--wine);color:#fff;padding:.65rem 1rem;border-radius:.4rem;text-decoration:none;font-weight:700}
+    img{display:block;width:100%;background:#ede4db;object-fit:contain}
+    .hero img{height:clamp(13rem,26vw,20rem);border-radius:.6rem;object-fit:cover}
+    figcaption,.note{color:var(--muted);font-size:.9rem;margin-top:.35rem}
+    .block{border-top:1px solid var(--line);padding:1.65rem 0}
+    .cats,.gallery,.guides{list-style:none;margin:0;padding:0;display:grid;gap:.65rem}
+    .cats{grid-template-columns:repeat(auto-fit,minmax(min(11rem,100%),1fr))}
+    .cats a{display:flex;align-items:center;justify-content:space-between;min-height:3rem;padding:.55rem .75rem;background:var(--card);border:1px solid var(--line);border-radius:.35rem;text-decoration:none;font-weight:650}
+    .cats a:hover,.cats a:focus-visible{background:#f0e3da;text-decoration:underline}
+    .gallery{grid-template-columns:repeat(4,minmax(0,1fr));margin-top:1rem}
+    .gallery img{aspect-ratio:1;height:auto;border-radius:.35rem}
+    .guides{grid-template-columns:repeat(2,minmax(0,1fr))}
+    article{padding:1rem;background:var(--card);border-left:3px solid var(--wine)}
+    details{border-bottom:1px solid var(--line);padding:.75rem 0}
+    summary{cursor:pointer;font-weight:700}
+    details p{max-width:72ch;margin:.45rem 0 0}
+    footer{background:#efe5da;padding:1.35rem 0}
+    @media(max-width:42rem){.hero,.guides{grid-template-columns:1fr}.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.hero img{object-fit:contain}}
+    @media(max-width:26rem){.cats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "inLanguage":"de",
+    "name":"UIDBuy spreadsheet: Sneaker, Streetwear und QC im Überblick",
+    "mainEntity":[
+      {"@type":"Question","name":"Was ist ein UIDBuy spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Ein UIDBuy spreadsheet ist eine nach Kategorien geordnete Sammlung von Produktlinks und Notizen, etwa zu Größe, Farbe und Händler. Die Kategorie-Links auf dieser Seite führen zu HipoBuyFind."}},
+      {"@type":"Question","name":"Wie finde ich die passende Größe?","acceptedAnswer":{"@type":"Answer","text":"Miss ein gut sitzendes Vergleichsstück in Zentimetern. Vergleiche die Werte mit der Tabelle des konkreten Angebots und achte darauf, ob dort Körpermaße oder Maße des Artikels angegeben sind."}},
+      {"@type":"Question","name":"Was zeigen UIDBuy QC-Fotos?","acceptedAnswer":{"@type":"Answer","text":"QC-Fotos zeigen sichtbare Details des fotografierten Artikels, etwa Nähte, Sohlen oder Etiketten. Für eine Echtheitsprüfung brauchst du zusätzliche Belege zur Herkunft."}},
+      {"@type":"Question","name":"Wie kalkuliere ich den Versand nach Deutschland?","acceptedAnswer":{"@type":"Answer","text":"Vergleiche die verfügbaren Versandoptionen mit dem verpackten Gewicht und den Paketmaßen. Addiere zum Artikelpreis den Inlandsversand, Servicegebühren, internationalen Versand und gegebenenfalls Einfuhrabgaben."}}
+    ]
+  }
+  </script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/wexjd/">
+</head>
+<body>
+  <header class="mast"><div class="wrap"><a href="https://www.hipobuyfind.com">HipoBuyFind</a></div></header>
+  <main class="wrap">
+    <section class="hero" aria-labelledby="titel">
+      <div>
+        <h1 id="titel">UIDBuy spreadsheet</h1>
+        <p class="intro">Ein UIDBuy spreadsheet bündelt Produktlinks und Notizen zu Sneakern, Streetwear und Accessoires. Hier findest du die Kategorien von HipoBuyFind und einen Leitfaden für Größen, Kontrollfotos und Versand nach Deutschland.</p>
+        <a class="button" href="https://www.hipobuyfind.com">Katalog bei HipoBuyFind öffnen</a>
+      </div>
+      <figure>
+        <img src="https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto%2Cu_9ddf04c7-2a9a-4d76-add1-d15af8f0263d%2Cc_scale%2Cfl_relative%2Cw_1.0%2Ch_1.0%2Cfl_layer_apply/b7d9211c-26e7-431a-ac24-b0540fb3c00f/AIR%2BFORCE%2B1%2B%2707.png" width="1070" height="1338" alt="Weißer Nike Air Force 1 ’07 mit weißer Sohle" loading="eager" fetchpriority="high">
+        <figcaption>Nike Air Force 1 ’07 · Modellbeispiel</figcaption>
+      </figure>
+    </section>
+
+    <nav class="block" aria-labelledby="kategorien">
+      <h2 id="kategorien">Nach Kategorie stöbern</h2>
+      <ul class="cats">
+        <li><a href="https://hipobuyfind.com/category-911-Shoes.html">Schuhe <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-912-Hoodies%2FSweaters.html">Hoodies &amp; Pullover <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-913-T-Shirts.html">T-Shirts <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-914-Jackets.html">Jacken <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-915-Pants%2FShorts.html">Hosen &amp; Shorts <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-916-Headwear.html">Caps &amp; Mützen <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-917-Sets.html">Sets <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-918-underwear%2Funderpants.html">Unterwäsche <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-919-Jersey.html">Trikots <span aria-hidden="true">↗</span></a></li>
+        <li><a href="https://hipobuyfind.com/category-920-Accessories.html">Accessoires <span aria-hidden="true">↗</span></a></li>
+      </ul>
+    </nav>
+
+    <section class="block" aria-labelledby="details">
+      <h2 id="details">Schnitt, Material und Verarbeitung</h2>
+      <p>Bei Jeansjacken lohnt sich der Blick auf Schulterbreite und Saum. Bei Caps helfen Kopfumfang und Verschlussart, bei Tüchern die Kantenlänge, bei Ketten die Länge inklusive Verschluss.</p>
+      <ul class="gallery">
+        <li><figure><img src="https://en.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-monogram-denim-jacket--FVJA29EFY610_PM2_Front%20view.png?hei=640&amp;wid=640" width="640" height="640" alt="Louis-Vuitton-Jeansjacke mit Monogramm in der Vorderansicht" loading="lazy" decoding="async"><figcaption>Louis Vuitton · Jeansjacke</figcaption></figure></li>
+        <li><figure><img src="https://media.gucci.com/style/HEXFBFBFB_South_0_160_640x640/1751298339/838745_3HBC4_2600_001_100_0000_Light.jpg" width="640" height="640" alt="Gucci-Baseballcap mit GG-Muster" loading="lazy" decoding="async"><figcaption>Gucci · Baseballcap</figcaption></figure></li>
+        <li><figure><img src="https://www.fashionphile.com/cdn/shop/files/25b6273a425ba6e5ecaa3be2a485da4c.jpg?v=1772018197&amp;width=640" width="640" height="640" alt="Gemustertes Hermès-Seidentuch Brides de Gala" loading="lazy" decoding="async"><figcaption>Hermès · Seidentuch</figcaption></figure></li>
+        <li><figure><img src="https://assets.christiandior.com/is/image/diorprod/N2241WOMCYD03S_E01-2?%24default_GH%24=&amp;wid=640&amp;hei=640" width="640" height="640" alt="Goldfarbene Dior-Kette Petit CD mit CD-Anhänger" loading="lazy" decoding="async"><figcaption>Dior · Halskette</figcaption></figure></li>
+      </ul>
+      <p class="note">Die Fotos zeigen Stilbeispiele. Preise und Verfügbarkeit stehen beim jeweiligen Anbieter.</p>
+    </section>
+
+    <section class="block" aria-labelledby="ratgeber">
+      <h2 id="ratgeber">Vom Fund zur Kaufentscheidung</h2>
+      <div class="guides">
+        <article>
+          <h3>UIDBuy Sneaker: Größe und Modell vergleichen</h3>
+          <p>Miss die herausnehmbare Innensohle eines gut sitzenden Schuhs von der Ferse bis zur Spitze. Nutze denselben Messpunkt im Angebot. Gleiche Modellcode, Farbvariante und die Sohlenform im Profil ab, besonders wenn ein Händler mehrere Versionen zusammen listet.</p>
+        </article>
+        <article>
+          <h3>UIDBuy Streetwear: Maße am Kleidungsstück prüfen</h3>
+          <p>Miss Hoodies und T-Shirts flach von Achsel zu Achsel und die Ärmel ab der Schulternaht. Vergleiche bei Hosen die ungedehnte Bundweite und die Innenbeinlänge. Prüfe bei Sets Ober- und Unterteil einzeln. Bei Trikots mit Aufdruck lohnt sich ein Foto der Rückennummer.</p>
+        </article>
+        <article>
+          <h3>UIDBuy QC-Fotos: die gewählte Variante prüfen</h3>
+          <p>Öffne den Produktlink erneut und notiere Händler, Modell, Farbe und Größe. Wenn ein Kontrollfoto vorliegt, vergleiche die Angaben mit dem Etikett. Schau dir Nähte, Reißverschlüsse und Sohlen im Detail an. Ist eine Stelle verdeckt, frage nach einem Foto aus einem anderen Winkel.</p>
+        </article>
+        <article>
+          <h3>UIDBuy Versand nach Deutschland: Gesamtkosten vergleichen</h3>
+          <p>Rechne vor dem Kauf mit Artikelpreis, Inlandsversand und Servicegebühren. Sobald Paketmaße und verpacktes Gewicht feststehen, vergleiche die internationalen Versandangebote. Prüfe, ob der Tarif nach tatsächlichem Gewicht oder Volumengewicht berechnet wird und welche Einfuhrabgaben anfallen können.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="block" aria-labelledby="faq">
+      <h2 id="faq">Häufige Fragen</h2>
+      <details open><summary>Was ist ein UIDBuy spreadsheet?</summary><p>Ein UIDBuy spreadsheet ist eine nach Kategorien geordnete Sammlung von Produktlinks und Notizen, etwa zu Größe, Farbe und Händler. Die Kategorie-Links auf dieser Seite führen zu HipoBuyFind.</p></details>
+      <details><summary>Wie finde ich die passende Größe?</summary><p>Miss ein gut sitzendes Vergleichsstück in Zentimetern. Vergleiche die Werte mit der Tabelle des konkreten Angebots und achte darauf, ob dort Körpermaße oder Maße des Artikels angegeben sind.</p></details>
+      <details><summary>Was zeigen UIDBuy QC-Fotos?</summary><p>QC-Fotos zeigen sichtbare Details des fotografierten Artikels, etwa Nähte, Sohlen oder Etiketten. Für eine Echtheitsprüfung brauchst du zusätzliche Belege zur Herkunft.</p></details>
+      <details><summary>Wie kalkuliere ich den Versand nach Deutschland?</summary><p>Vergleiche die verfügbaren Versandoptionen mit dem verpackten Gewicht und den Paketmaßen. Addiere zum Artikelpreis den Inlandsversand, Servicegebühren, internationalen Versand und gegebenenfalls Einfuhrabgaben.</p></details>
+    </section>
+  </main>
+  <footer><div class="wrap"><p>Unabhängiger Einkaufsleitfaden. Markennamen bezeichnen die gezeigten Beispiele.</p><a href="https://www.hipobuyfind.com">HipoBuyFind öffnen</a></div></footer>
+</body>
+</html>
